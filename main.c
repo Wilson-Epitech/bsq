@@ -7,26 +7,18 @@
 
 #include "includes/lib.h"
 
+int my_putstr(char const *str)
+{
+    write(1, str, my_strlen(str));
+}
+
 int main(int ac, char **av)
 {
     struct stat sb;
-    const char *filepath = av[1];
-    stat(filepath, &sb);
+    stat(av[1], &sb);
     char *buff = malloc((sizeof(char)) * (sb.st_size));
-    char **string;
-    int fd;
-    int buffcount = 0;
-
-    fd = open(filepath, O_RDONLY);
-    if (fd < 0) {
-        exit(84);
-    }
-    for (int count_line = 0; count_line != 3; count_line++) {
-        buffcount = read(fd, buff, sb.st_size);
-    }
-    string = my_str_to_word_array(buff);
+    int fd = open(av[1], O_RDONLY);
+    int buffcount = read(fd, buff, sb.st_size);
     my_putstr(buff);
-    free(buff);
-    my_putchar('\n');
     close(fd);
 }
