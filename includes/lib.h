@@ -17,4 +17,5 @@ int my_putstr(char const *str);
 void my_putchar(char c);
 int print_first_line(const char *filepath);
 char **my_str_to_word_array(char const *str);
+int my_strlen(const char *str);
 #endif //PROTO.h
