@@ -9,6 +9,8 @@
 
 int print_array(BSQ_T *ALL)
 {
+    my_put_nbr(ALL->array.nb_line);
+    my_putchar('\n');
     for (int b = 0; b != ALL->array.nb_line; b++) {
         for (int s = 0; s != ALL->array.width_line; s++) {
             my_put_nbr(ALL->array.array[b][s]);
