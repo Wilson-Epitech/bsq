@@ -9,9 +9,6 @@
 
 int print_array(BSQ_T *ALL)
 {
-    printf("width value : %d\n", ALL->array.width);
-    printf("width line value : %d\n", ALL->array.width_line);
-    printf("nb_line value : %d\n", ALL->array.nb_line);
     for (int b = 0; b != ALL->array.nb_line; b++) {
         for (int s = 0; s != ALL->array.width_line; s++) {
             my_put_nbr(ALL->array.array[b][s]);
