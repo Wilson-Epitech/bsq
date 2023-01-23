@@ -1,0 +1,17 @@
+/*
+** BSQ PROJECT, 2023
+** bsq
+** File description:
+** print_array
+*/
+
+#include "../includes/lib.h"
+
+int print_array(BSQ_T *ALL)
+{
+    for (int x = 1; ALL->array.map[x + 1] != NULL; x++) {
+            my_putstr(ALL->array.map[x]);
+            my_putchar('\n');
+    }
+    return 0;
+}

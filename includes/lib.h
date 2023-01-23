@@ -22,4 +22,12 @@ int strlen_char_of_line(BSQ_T *ALL);
 int width_of_array(BSQ_T *ALL);
 int before_first_char(BSQ_T *ALL);
 int my_put_nbr(int nb);
+char **my_str_to_word_array(char const *str);
+int my_strlen(char const *str);
+int print_array(BSQ_T *ALL);
+int find_bsq(BSQ_T *ALL);
+int find_max_nb(BSQ_T *ALL);
+int find_min_nb(BSQ_T *ALL);
+int replace_bsq(BSQ_T *ALL);
+int replace_char(BSQ_T *ALL);
 #endif //PROTO.h

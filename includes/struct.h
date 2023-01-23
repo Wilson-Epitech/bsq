@@ -13,12 +13,20 @@
     typedef struct ARRAY_STRUCT {
         char *buff;
         int **array;
+        char **map;
         int r;
         int s;
         int i;
         int nb_line;
         int width;
         int width_line;
+        int left_pos;
+        int top_pos;
+        int top_left_pos;
+        int min_value;
+        int nb_max;
+        int pos_r_max;
+        int pos_s_max;
     } ARRAY_STRUCT_T;
 
     typedef struct BSQ {
