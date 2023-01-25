@@ -13,6 +13,7 @@ int assign_values_array(BSQ_T *ALL)
     ALL->array.width_line = strlen_char_of_line(ALL);
     ALL->array.i = before_first_char(ALL);
     ALL->array.array = malloc(sizeof(int*) * ALL->array.nb_line + 1);
+    return 0;
 }
 
 void call_func(BSQ_T *ALL)

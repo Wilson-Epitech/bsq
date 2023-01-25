@@ -30,4 +30,8 @@ int find_max_nb(BSQ_T *ALL);
 int find_min_nb(BSQ_T *ALL);
 int replace_bsq(BSQ_T *ALL);
 int replace_char(BSQ_T *ALL);
+int error_invalid_char_buffer(BSQ_T *ALL);
+int invalid_nb_args(BSQ_T *ALL, int ac);
+int invalid_file(BSQ_T *ALL, int fd);
+int empty_file(BSQ_T *ALL);
 #endif //PROTO.h

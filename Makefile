@@ -16,6 +16,7 @@ SRC     =       main.c                                  \
 				src/replace.c							\
 				src/find_bsq.c							\
 				src/find_max_min_nb.c					\
+				src/error_handling.c					\
 				src/lib/my_putchar.c					\
 				src/lib/my_put_nbr.c					\
 				src/lib/my_putstr.c						\
