@@ -16,18 +16,9 @@ int invalid_nb_args(BSQ_T *ALL, int ac)
     return 0;
 }
 
-int invalid_file(BSQ_T *ALL, int fd)
-{
-    if (fd < 0) {
-        my_putstr("invalid file \n");
-        exit(84);
-    }
-    return 0;
-}
-
 int empty_file(BSQ_T *ALL)
 {
-    if (my_strlen(ALL->array.buff) <= 4) {
+    if (my_strlen(ALL->array.buff) <= 3) {
         my_putstr("error : empty file \n");
         exit(84);
     }

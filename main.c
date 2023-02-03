@@ -27,10 +27,34 @@ void call_func(BSQ_T *ALL)
     print_array(ALL);
 }
 
+void replace_bsq_one(BSQ_T *ALL)
+{
+    for (int i = 0; ALL->array.buff[i] != '\0'; i++) {
+        if (ALL->array.buff[i] == '.') {
+            ALL->array.buff[i] = 'x';
+            break;
+        }
+    }
+}
+
+int bsq_option(BSQ_T *ALL, char **av)
+{
+    int width_line = strlen_char_of_line(ALL);
+    if (ALL->array.nb_line == 1 || width_line == 1) {
+        assign_values_array(ALL);
+        replace_bsq_one(ALL);
+        print_buff(ALL);
+    }
+    if (ALL->array.nb_line > 1 && width_line > 1) {
+        call_func(ALL);
+    }
+    return 0;
+}
+
 int main(int ac, char **av, char *buff)
 {
     BSQ_T ALL;
     init(&ALL, ac, av);
-    call_func(&ALL);
+    bsq_option(&ALL, av);
     return 0;
 }

@@ -34,4 +34,5 @@ int error_invalid_char_buffer(BSQ_T *ALL);
 int invalid_nb_args(BSQ_T *ALL, int ac);
 int invalid_file(BSQ_T *ALL, int fd);
 int empty_file(BSQ_T *ALL);
+void print_buff(BSQ_T *ALL);
 #endif //PROTO.h

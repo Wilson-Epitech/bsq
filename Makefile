@@ -9,20 +9,21 @@ CC      =       gcc
 CCFLAGS =       -Wextra -Wall -Werror
 CFLAGS  =		-g
 
-SRC     =       main.c                                  \
-				src/init_struct.c						\
-				src/count.c								\
-				src/print_array.c						\
-				src/replace.c							\
-				src/find_bsq.c							\
-				src/find_max_min_nb.c					\
-				src/error_handling.c					\
-				src/lib/my_putchar.c					\
-				src/lib/my_put_nbr.c					\
-				src/lib/my_putstr.c						\
-				src/lib/my_strlen.c						\
-				src/lib/my_getnbr.c						\
-				src/lib/my_str_to_word_array.c			\
+SRC     =       main.c						\
+		src/init_struct.c				\
+		src/count.c					\
+		src/print_array.c				\
+		src/print_buff.c				\
+		src/replace.c					\
+		src/find_bsq.c					\
+		src/find_max_min_nb.c				\
+		src/error_handling.c				\
+		src/lib/my_putchar.c				\
+		src/lib/my_put_nbr.c				\
+		src/lib/my_putstr.c				\
+		src/lib/my_strlen.c				\
+		src/lib/my_getnbr.c				\
+		src/lib/my_str_to_word_array.c			\
 
 OBJ     =       $(SRC:.c=.o)
 
