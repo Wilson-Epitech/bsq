@@ -34,7 +34,6 @@ int find_bsq(BSQ_T *ALL)
             ALL->array.top_left_pos = ALL->array.array[x - 1][y - 1];
             compare_values(ALL, x, y);
         }
-        //break;
     }
     return 0;
 }
