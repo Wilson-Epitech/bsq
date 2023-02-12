@@ -24,15 +24,15 @@ int map_generator(BSQ_T *ALL, char *str, char **av)
     line[width_line + width_line + width_line] = '\0';
     for (int r = 0; r < nb_line; r++) {
         for (s = 0; s < width_line; s++) {
-            if (av[2][i] == '\0') {
+            if (str[i] == '\0') {
                 i = 0;
             }
-            line[x] = av[2][i];
-            i += 1;
-            x += 1;
+            line[x] = str[i];
+            i ++;
+            x ++;
         }
         line[x] = '\n';
-        x += 1;
+        x ++;
         s = 0;
     }
     map_generator_extend(ALL, line);
