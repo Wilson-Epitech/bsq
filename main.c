@@ -57,6 +57,7 @@ int main(int ac, char **av, char *buff)
 {
     BSQ_T ALL;
     if (ac == 3) {
+        error_handling_generator(&ALL, av[2], av);
         init_generator(&ALL, av);
         map_generator(&ALL, av[2], av);
     }

@@ -39,4 +39,5 @@ int map_generator(BSQ_T *ALL, char *str, char **av);
 void init_generator(BSQ_T *ALL, char **av);
 int assign_values_array(BSQ_T *ALL);
 void call_func(BSQ_T *ALL);
+int error_handling_generator(BSQ_T *ALL, char *str, char **av);
 #endif //PROTO.h
