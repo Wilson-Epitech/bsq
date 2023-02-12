@@ -7,6 +7,14 @@
 
 #include "../includes/lib.h"
 
+int map_generator_extend(BSQ_T *ALL, char *line)
+{
+    ALL->array.buff = line;
+    ALL->array.map = my_str_to_word_array(ALL->array.buff);
+    call_func(ALL);
+    return 0;
+}
+
 int map_generator(BSQ_T *ALL, char *str, char **av)
 {
     int nb_line = my_getnbr(av[1]); int width_line = my_getnbr(av[1]);
@@ -27,8 +35,6 @@ int map_generator(BSQ_T *ALL, char *str, char **av)
         x += 1;
         s = 0;
     }
-    ALL->array.buff = line;
-    ALL->array.map = my_str_to_word_array(ALL->array.buff);
-    call_func(ALL);
+    map_generator_extend(ALL, line);
     return 0;
 }
