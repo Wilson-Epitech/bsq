@@ -11,6 +11,8 @@ CFLAGS  =		-g
 
 SRC     =       main.c						\
 		src/init_struct.c				\
+		src/init_generator.c				\
+		src/map_generator.c				\
 		src/count.c					\
 		src/print_array.c				\
 		src/print_buff.c				\

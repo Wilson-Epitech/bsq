@@ -9,16 +9,16 @@
 
 int invalid_nb_args(BSQ_T *ALL, int ac)
 {
-    if (ac != 2) {
+    if (ac != 2 && ac != 3) {
         my_putstr("invalid nb args\n");
         exit(84);
     }
     return 0;
 }
 
-int empty_file(BSQ_T *ALL)
+int empty_file(BSQ_T *ALL, int ac)
 {
-    if (my_strlen(ALL->array.buff) <= 3) {
+    if (my_strlen(ALL->array.buff) <= 3 && ac != 3) {
         my_putstr("error : empty file \n");
         exit(84);
     }

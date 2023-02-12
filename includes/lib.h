@@ -33,6 +33,10 @@ int replace_char(BSQ_T *ALL);
 int error_invalid_char_buffer(BSQ_T *ALL);
 int invalid_nb_args(BSQ_T *ALL, int ac);
 int invalid_file(BSQ_T *ALL, int fd);
-int empty_file(BSQ_T *ALL);
+int empty_file(BSQ_T *ALL, int ac);
 void print_buff(BSQ_T *ALL);
+int map_generator(BSQ_T *ALL, char *str, char **av);
+void init_generator(BSQ_T *ALL, char **av);
+int assign_values_array(BSQ_T *ALL);
+void call_func(BSQ_T *ALL);
 #endif //PROTO.h

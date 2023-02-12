@@ -20,7 +20,7 @@ void init_array_struct(BSQ_T *ALL, int ac, char **av)
     int fd = open(av[1], O_RDONLY);
     read(fd, ALL->array.buff, sb.st_size);
     error_invalid_char_buffer(ALL);
-    empty_file(ALL);
+    empty_file(ALL, ac);
     ALL->array.buff[sb.st_size] = '\0';
     ALL->array.nb_line = my_getnbr(ALL->array.buff);
     ALL->array.min_value = 0;

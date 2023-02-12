@@ -6,6 +6,7 @@
 */
 
 #include "includes/lib.h"
+#include <string.h>
 
 int assign_values_array(BSQ_T *ALL)
 {
@@ -37,13 +38,13 @@ void replace_bsq_one(BSQ_T *ALL)
     }
 }
 
-int bsq_option(BSQ_T *ALL, char **av)
+int bsq_option(BSQ_T *ALL, int ac, char **av)
 {
     int width_line = strlen_char_of_line(ALL);
+
     if (ALL->array.nb_line == 1 || width_line == 1) {
         assign_values_array(ALL);
         replace_bsq_one(ALL);
-        print_buff(ALL);
     }
     if (ALL->array.nb_line > 1 && width_line > 1) {
         call_func(ALL);
@@ -54,7 +55,13 @@ int bsq_option(BSQ_T *ALL, char **av)
 int main(int ac, char **av, char *buff)
 {
     BSQ_T ALL;
-    init(&ALL, ac, av);
-    bsq_option(&ALL, av);
+    if (ac == 3) {
+        init_generator(&ALL, av);
+        map_generator(&ALL, av[2], av);
+    }
+    if (ac != 3) {
+        init(&ALL, ac, av);
+        bsq_option(&ALL, ac, av);
+    }
     return 0;
 }

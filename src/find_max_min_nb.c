@@ -14,6 +14,7 @@ void asign_values_max_nb(BSQ_T *ALL, int r, int s)
         ALL->array.pos_r_max = r;
         ALL->array.pos_s_max = s;
     }
+
 }
 
 int find_max_nb(BSQ_T *ALL)
