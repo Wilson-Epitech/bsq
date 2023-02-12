@@ -37,6 +37,7 @@ int find_min_nb(BSQ_T *ALL)
         for (int s = pos_s_min; s <= ALL->array.pos_s_max; s++) {
             ALL->array.array[r][s] = 8;
         }
+                            break;
     }
     return 0;
 }

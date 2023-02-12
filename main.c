@@ -45,6 +45,7 @@ int bsq_option(BSQ_T *ALL, int ac, char **av)
     if (ALL->array.nb_line == 1 || width_line == 1) {
         assign_values_array(ALL);
         replace_bsq_one(ALL);
+        print_buff(ALL);
     }
     if (ALL->array.nb_line > 1 && width_line > 1) {
         call_func(ALL);

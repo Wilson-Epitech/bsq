@@ -1,0 +1,106 @@
+==66775== Memcheck, a memory error detector
+==66775== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==66775== Using Valgrind-3.20.0 and LibVEX; rerun with -h for copyright info
+==66775== Command: ./bsq src/mouli_maps/intermediate_map_1000_1000
+==66775== Parent PID: 66654
+==66775== 
+==66775== Conditional jump or move depends on uninitialised value(s)
+==66775==    at 0x4020CF: error_invalid_char_buffer (error_handling.c:30)
+==66775==    by 0x4014A1: init_array_struct (init_struct.c:22)
+==66775==    by 0x401586: init (init_struct.c:42)
+==66775==    by 0x401383: main (main.c:64)
+==66775== 
+==66775== Conditional jump or move depends on uninitialised value(s)
+==66775==    at 0x4021FA: my_strlen (my_strlen.c:11)
+==66775==    by 0x401FDC: empty_file (error_handling.c:21)
+==66775==    by 0x4014B8: init_array_struct (init_struct.c:23)
+==66775==    by 0x401586: init (init_struct.c:42)
+==66775==    by 0x401383: main (main.c:64)
+==66775== 
+==66775== Invalid read of size 4
+==66775==    at 0x401D83: find_bsq (find_bsq.c:33)
+==66775==    by 0x401215: call_func (main.c:24)
+==66775==    by 0x401317: bsq_option (main.c:51)
+==66775==    by 0x401398: main (main.c:65)
+==66775==  Address 0x4d43810 is 0 bytes after a block of size 4,000 alloc'd
+==66775==    at 0x484386F: malloc (vg_replace_malloc.c:393)
+==66775==    by 0x401B8F: replace_char (replace.c:37)
+==66775==    by 0x401209: call_func (main.c:23)
+==66775==    by 0x401317: bsq_option (main.c:51)
+==66775==    by 0x401398: main (main.c:65)
+==66775== 
+==66775== Invalid read of size 4
+==66775==    at 0x401C95: compare_values (find_bsq.c:20)
+==66775==    by 0x401DD5: find_bsq (find_bsq.c:35)
+==66775==    by 0x401215: call_func (main.c:24)
+==66775==    by 0x401317: bsq_option (main.c:51)
+==66775==    by 0x401398: main (main.c:65)
+==66775==  Address 0x4d447f0 is 0 bytes after a block of size 4,000 alloc'd
+==66775==    at 0x484386F: malloc (vg_replace_malloc.c:393)
+==66775==    by 0x401B8F: replace_char (replace.c:37)
+==66775==    by 0x401209: call_func (main.c:23)
+==66775==    by 0x401317: bsq_option (main.c:51)
+==66775==    by 0x401398: main (main.c:65)
+==66775== 
+==66775== 
+==66775== HEAP SUMMARY:
+==66775==     in use at exit: 7,019,043 bytes in 2,006 blocks
+==66775==   total heap usage: 2,006 allocs, 0 frees, 7,019,043 bytes allocated
+==66775== 
+==66775== LEAK SUMMARY:
+==66775==    definitely lost: 2,018,037 bytes in 4 blocks
+==66775==    indirectly lost: 5,001,006 bytes in 2,002 blocks
+==66775==      possibly lost: 0 bytes in 0 blocks
+==66775==    still reachable: 0 bytes in 0 blocks
+==66775==         suppressed: 0 bytes in 0 blocks
+==66775== Rerun with --leak-check=full to see details of leaked memory
+==66775== 
+==66775== Use --track-origins=yes to see where uninitialised values come from
+==66775== ERROR SUMMARY: 2000 errors from 4 contexts (suppressed: 0 from 0)
+==66775== 
+==66775== 1 errors in context 1 of 4:
+==66775== Conditional jump or move depends on uninitialised value(s)
+==66775==    at 0x4021FA: my_strlen (my_strlen.c:11)
+==66775==    by 0x401FDC: empty_file (error_handling.c:21)
+==66775==    by 0x4014B8: init_array_struct (init_struct.c:23)
+==66775==    by 0x401586: init (init_struct.c:42)
+==66775==    by 0x401383: main (main.c:64)
+==66775== 
+==66775== 
+==66775== 1 errors in context 2 of 4:
+==66775== Conditional jump or move depends on uninitialised value(s)
+==66775==    at 0x4020CF: error_invalid_char_buffer (error_handling.c:30)
+==66775==    by 0x4014A1: init_array_struct (init_struct.c:22)
+==66775==    by 0x401586: init (init_struct.c:42)
+==66775==    by 0x401383: main (main.c:64)
+==66775== 
+==66775== 
+==66775== 999 errors in context 3 of 4:
+==66775== Invalid read of size 4
+==66775==    at 0x401C95: compare_values (find_bsq.c:20)
+==66775==    by 0x401DD5: find_bsq (find_bsq.c:35)
+==66775==    by 0x401215: call_func (main.c:24)
+==66775==    by 0x401317: bsq_option (main.c:51)
+==66775==    by 0x401398: main (main.c:65)
+==66775==  Address 0x4d447f0 is 0 bytes after a block of size 4,000 alloc'd
+==66775==    at 0x484386F: malloc (vg_replace_malloc.c:393)
+==66775==    by 0x401B8F: replace_char (replace.c:37)
+==66775==    by 0x401209: call_func (main.c:23)
+==66775==    by 0x401317: bsq_option (main.c:51)
+==66775==    by 0x401398: main (main.c:65)
+==66775== 
+==66775== 
+==66775== 999 errors in context 4 of 4:
+==66775== Invalid read of size 4
+==66775==    at 0x401D83: find_bsq (find_bsq.c:33)
+==66775==    by 0x401215: call_func (main.c:24)
+==66775==    by 0x401317: bsq_option (main.c:51)
+==66775==    by 0x401398: main (main.c:65)
+==66775==  Address 0x4d43810 is 0 bytes after a block of size 4,000 alloc'd
+==66775==    at 0x484386F: malloc (vg_replace_malloc.c:393)
+==66775==    by 0x401B8F: replace_char (replace.c:37)
+==66775==    by 0x401209: call_func (main.c:23)
+==66775==    by 0x401317: bsq_option (main.c:51)
+==66775==    by 0x401398: main (main.c:65)
+==66775== 
+==66775== ERROR SUMMARY: 2000 errors from 4 contexts (suppressed: 0 from 0)
