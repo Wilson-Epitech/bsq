@@ -20,6 +20,19 @@ int replace_bsq(BSQ_T *ALL)
     return 0;
 }
 
+int replace_bsq_generator(BSQ_T *ALL)
+{
+    int pos_r_min = ALL->array.pos_r_max - ALL->array.nb_max + 1;
+    int pos_s_min = ALL->array.pos_s_max - ALL->array.nb_max + 1;
+
+    for (int r = pos_r_min; r <= ALL->array.pos_r_max; r++) {
+        for (int s = pos_s_min; s <= ALL->array.pos_s_max; s++) {
+            ALL->array.map[r][s] = 'x';
+        }
+    }
+    return 0;
+}
+
 void replace_char2(BSQ_T *ALL)
 {
     if (ALL->array.buff[ALL->array.i] == '.') {

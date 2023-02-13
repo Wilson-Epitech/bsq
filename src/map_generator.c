@@ -16,7 +16,7 @@ int map_generator_extend(BSQ_T *ALL, char *line)
     find_bsq(ALL);
     find_max_nb(ALL);
     find_min_nb(ALL);
-    replace_bsq(ALL);
+    replace_bsq_generator(ALL);
     print_array_generator(ALL);
     return 0;
 }
