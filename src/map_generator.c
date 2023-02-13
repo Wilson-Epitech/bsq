@@ -11,7 +11,13 @@ int map_generator_extend(BSQ_T *ALL, char *line)
 {
     ALL->array.buff = line;
     ALL->array.map = my_str_to_word_array(ALL->array.buff);
-    call_func(ALL);
+    assign_values_array(ALL);
+    replace_char(ALL);
+    find_bsq(ALL);
+    find_max_nb(ALL);
+    find_min_nb(ALL);
+    replace_bsq(ALL);
+    print_array_generator(ALL);
     return 0;
 }
 
