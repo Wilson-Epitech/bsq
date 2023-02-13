@@ -26,6 +26,7 @@ int find_bsq(BSQ_T *ALL)
 {
     int x = 1;
     int y = 1;
+
     for (int x = 1; x < ALL->array.nb_line; x++) {
         for (int y = 1; y < ALL->array.width_line + 1; y++) {
             ALL->array.left_pos = ALL->array.array[x][y - 1];
